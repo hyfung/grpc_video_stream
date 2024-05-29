@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service VideoStream {
+    rpc Infer (stream Frame) returns (stream Result);
+}
+
+message Frame {
+    bytes data = 1;
+}
+
+message Result {
+    bytes data = 1;
+}
